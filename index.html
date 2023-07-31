@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="./section1/container.js"></script>
+    <script src="./section6/container-six.js"></script>
+    <script src="./section9/container-nine.js"></script>
+    <!-- <script src="java/Homepage.js"></script> -->
+
+
+    <title>Samar</title>
+    <link rel="stylesheet" href="./style/HomePage.css">
+    <link rel="stylesheet" href="./section1/container.css">
+    <link rel="stylesheet" href="./section2/container-second.css">
+    <link rel="stylesheet" href="./section3/container-third.css">
+    <link rel="stylesheet" href="./section4/container-forth.css">
+    <link rel="stylesheet" href="./section5/container-five.css">
+    <link rel="stylesheet" href="./section6/container-six.css">
+    <link rel="stylesheet" href="./section7/container-seven.css">
+    <link rel="stylesheet" href="./section8/container-eight.css">
+    <link rel="stylesheet" href="./section9/container-nine.css">
+    <link rel="stylesheet" href="./section10/container-ten.css">
+    <link rel="stylesheet" href="./section11/container-eleven.css">
+
+
+    <link rel="import" href="./section1/container.html">
+    <link rel="import" href="./section2/container-second.html">
+    <link rel="import" href="./section3/container-third.html">
+    <link rel="import" href="./section4/container-forth.html">
+    <link rel="import" href="./section5/container-five.html">
+    <link rel="import" href="./section6/container-six.html">
+    <link rel="import" href="./section7/container-seven.html">
+    <link rel="import" href="./section8/container-eight.html">
+    <link rel="import" href="./section9/container-nine.html">
+    <link rel="import" href="./section10/container-ten.html">
+    <link rel="import" href="./section11/container-eleven.html">
+</head>
+
+
+
+<body>
+    <div class="parent" id="parent">
+        <div class="stt">
+            <a href="#"><box-icon name='up-arrow-alt'></box-icon></a>
+        </div>
+        <div class="left">
+            <a href="#"><box-icon name='up-arrow-alt'></box-icon></a>
+        </div>
+        <div class="upleft">
+            <a href="#"><box-icon name='up-arrow-alt'></box-icon></a>
+        </div>
+
+        <div id="section1"></div>
+        <div id="section2"></div>
+        <div id="section3"></div>
+        <div id="section4"></div>
+        <div id="section5"></div>
+        <div id="section6"></div>
+        <div id="section7"></div>
+        <div id="section8"></div>
+        <div id="section9"></div>
+        <div id="section10"></div>
+        <div id="section11"></div>
+
+    </div>
+
+
+
+    <!-- JavaScript to fetch and inject sections -->
+    <script>
+        // Function to fetch and inject HTML content
+        function fetchAndInjectSection(url, targetElementId, callback) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    const targetElement = document.getElementById(targetElementId);
+                    targetElement.innerHTML = html;
+
+              
+                    if (targetElementId === 'section9') {
+                        $('.img-slider').slick({
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                            arrows: false,
+                            infinite: true,
+                        });
+                    }
+
+                    // Call the callback function to track the number of loaded sections
+                    if (callback) {
+                        callback();
+                    }
+                })
+                .catch(error => console.error('Error fetching content:', error));
+        }
+
+        
+        let loadedSections = 0;
+
+    
+        function allSectionsLoaded() {
+            loadedSections++;
+
+            if (loadedSections === 11) { 
+                const defaultTab = document.getElementById('default');
+                const tabIndex = Array.from(defaultTab.parentNode.parentNode.children).indexOf(defaultTab.parentNode);
+                changeTab(tabIndex);
+            }
+        }
+
+        // Fetch and inject all sections
+        fetchAndInjectSection('./section1/container.html', 'section1', allSectionsLoaded);
+        fetchAndInjectSection('./section2/container-second.html', 'section2', allSectionsLoaded);
+        fetchAndInjectSection('./section3/container-third.html', 'section3', allSectionsLoaded);
+        fetchAndInjectSection('./section4/container-forth.html', 'section4', allSectionsLoaded);
+        fetchAndInjectSection('./section5/container-five.html', 'section5', allSectionsLoaded);
+        fetchAndInjectSection('./section6/container-six.html', 'section6', allSectionsLoaded);
+        fetchAndInjectSection('./section7/container-seven.html', 'section7', allSectionsLoaded);
+        fetchAndInjectSection('./section8/container-eight.html', 'section8', allSectionsLoaded);
+        fetchAndInjectSection('./section9/container-nine.html', 'section9', allSectionsLoaded);
+        fetchAndInjectSection('./section10/container-ten.html', 'section10', allSectionsLoaded);
+        fetchAndInjectSection('./section11/container-eleven.html', 'section11', allSectionsLoaded);
+
+        // Function for the "All" tab functionality
+        function changeTab(tabIndex) {
+            const tabLinks = document.querySelectorAll('.tablink');
+            const tabContents = document.querySelectorAll('.tabs1');
+
+            // Remove 'active' class from all tab links
+            tabLinks.forEach(function (link) {
+                link.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked tab link
+            tabLinks[tabIndex].classList.add('active');
+
+            // Hide all tab contents
+            tabContents.forEach(function (content) {
+                content.style.display = 'none';
+            });
+
+            // Show the selected tab content
+            tabContents[tabIndex].style.display = 'block';
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container-ten {
+    width: 100%;
+    padding: 50px 150px 0 150px;
+    background-color: rgb(71, 71, 71);
+  }
+  
+  .Subscribe {
+    background-color: white;
+    width: 100%;
+    background-image: url("../images/curve3.png");
+    box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.15);
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+    padding: 50px;
+    border-radius: 15px;
+  }
+  
+  .Subscribe h1 {
+    font-size: 25px;
+  }
+  
+  .Subscribe input {
+    margin-top: 15px;
+    width: 40%;
+    height: 35px;
+    border-radius: 50px;
+  }
+  
+  .Subscribe input::placeholder {
+    padding: 15px;
+  }
+  @media screen and (max-width: 770px){
+    .container-ten{
+      width: 100%;
+      padding: 30px;
+    }
+
+    .Subscribe{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .Subscribe input{
+      width: 90%;
+    }
+  }

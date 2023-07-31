@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.container-eight {
+    width: 100%;
+    padding: 100px 150px;
+  }
+  
+  .testi {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .testi h3 {
+    background-color: #f5b4d7;
+    color: rgb(248, 41, 76);
+    opacity: 0.5;
+    width: 20%;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50px;
+    margin: 15px;
+  }
+  
+  .testi h1 {
+    font-size: 25px;
+  }
+  
+  .dp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dp img {
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  
+  .comment {
+    background-image: url(../images/curve3.png);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .comment h2 {
+    margin: 10px;
+  }
+  
+  .comment p {
+    margin: 15px;
+  }
+
+
+  @media screen and (max-width: 974px) { 
+    .dp {
+      margin: 15px 0;
+    }
+  }
+
+  @media screen and (max-width: 770px){
+    .container-eight{
+      width: 100%;
+      margin: 50px 0;
+      padding: 30px;
+    }
+      .dp {
+      margin: 15px 0;
+    }
+  }
+    

@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.container-eleven {
+    background-color: rgb(71, 71, 71);
+    width: 100%;
+    padding: 0 150px 0 150px;
+  }
+  
+  .container-eleven {
+    padding: 25px;
+    color: white;
+  }
+  .our-link {
+
+    padding: 25px;
+   
+    display: flex;
+    justify-content: space-around;
+  }
+ 
+  .end {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Logo-end {
+    margin-bottom: 25px;
+  }
+  
+  .Logo-end img {
+    width: 85%;
+    padding-left: 10px;
+  }
+  
+  .Contact {
+    display: flex;
+    margin: 15px 0;
+  }
+  
+  .Contact p {
+    margin-left: 10px;
+  }
+  
+  .end .link {
+    padding: 10px;
+  }
+  
+  .link h3 {
+    font-size: 20px;
+  }
+  
+  .link h4 {
+    border: 1px white solid;
+    margin-bottom: 35px;
+    width: 100%;
+  }
+  
+  .link a {
+    display: flex;
+    margin-bottom: 21px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .container-twelve {
+    color: white;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+  }
+  
+  .copy {
+    background-color: rgb(39, 39, 39);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .rights h3 {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .copy ul {
+    display: flex;
+    align-items: center;
+  }
+  
+  .copy li {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 0 12px;
+    line-height: 10px;
+    width: 30px;
+    border-radius: 50px;
+  }
+  
+  .copy li:hover {
+    background-color: pink;
+  }
+  
+
+  @media screen and (max-width: 770px){
+    .container-eleven{
+      width: 100%;
+      padding: 30px;
+    }
+    .our-link{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .our-link>*{
+    flex: 50%;
+   }
+    
+   
+  }
+  

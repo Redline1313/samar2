@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  max-height: fit-content;
+  height: max-content;
+}
+
+.parent {
+ 
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.parent .stt {
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  padding: 10px;
+  background-color: #ff0000;
+  border-radius: 5px;
+}
+
+.stt a {
+  display: flex;
+  justify-content: center;
+}
+
+.stt:hover {
+    opacity: 0.8;
+}
+
+.parent .left {
+  position: fixed;
+  left: 1rem;
+  bottom: 5rem;
+  width: 40px;
+  padding: 10px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.left a {
+  display: flex;
+  justify-content: center;
+}
+
+.left:hover {
+  opacity: 0.9;
+}
+
+.parent .upleft {
+  position: fixed;
+  left: 1rem;
+  bottom: 9rem;
+  width: 40px;
+  padding: 10px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.upleft a {
+  display: flex;
+  justify-content: center;
+}
+
+.upleft:hover {
+  opacity: 0.9;
+}
+
+
+
+object{
+  width: 100%;
+ 
+ 
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden;
+}
